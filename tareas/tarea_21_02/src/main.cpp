@@ -12,10 +12,9 @@ int main()
     cout << "Ingrese las coordenadas del punto 2: " << endl;
     cin >> punto2.x >> punto2.y; //usuario ingresa coordenadas punto 2
 
-    int sumax = punto1.x + punto2.x; //suma coordenada x
-    int sumay = punto1.y + punto2.y; //suma coordenada y
+    punto suma = punto1 + punto2;
     
-    cout << "La suma en x es: " << sumax << " y la suma en y es: " << sumay << "." << endl; //imprime la suma
+    cout << "La suma en x es: " << suma.x << " y la suma en y es: " << suma.y << "." << endl; //imprime la suma
 
     return 0;
 }
