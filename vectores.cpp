@@ -13,6 +13,7 @@ int main(){
     cout << "Ingresar 10 números enteros:" << endl;
     for( int i = 0; i < 10; i++ ) cin >> a[i];
 
+    cout << "Tamaño: " << sizeof(a) << endl;
     // inviertiendo en orden en b
     for( int i = 0; i < 10; i++ ) b[9-i] = a[i];
 
