@@ -1,0 +1,3 @@
+/home/fedec/exmpl/ALSE_2410/parcial_1/build/CMakeFiles/lectura_coef.dir
+/home/fedec/exmpl/ALSE_2410/parcial_1/build/CMakeFiles/edit_cache.dir
+/home/fedec/exmpl/ALSE_2410/parcial_1/build/CMakeFiles/rebuild_cache.dir
