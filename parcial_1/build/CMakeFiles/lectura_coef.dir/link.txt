@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/lectura_coef.dir/parcial.cpp.o -o lectura_coef 

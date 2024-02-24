@@ -1,0 +1,3 @@
+/home/sebastian/trabajos_de_clase/rep/ALSE_2410/parcial_1/build/CMakeFiles/lectura_coef.dir
+/home/sebastian/trabajos_de_clase/rep/ALSE_2410/parcial_1/build/CMakeFiles/edit_cache.dir
+/home/sebastian/trabajos_de_clase/rep/ALSE_2410/parcial_1/build/CMakeFiles/rebuild_cache.dir
