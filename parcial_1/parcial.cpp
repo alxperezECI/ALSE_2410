@@ -75,7 +75,7 @@ int main(int argc, char** argv){
 
   //ángulo del imaginario.
   for ( int i=0; i<10; i++ ){
-    double ang = atan(vec_com[i].im/vec_com[i].re);
+    double ang = atan2(vec_com[i].im/vec_com[i].re);
     //cout << ang << endl;
     vec_com[i].ang = ang;
   }
