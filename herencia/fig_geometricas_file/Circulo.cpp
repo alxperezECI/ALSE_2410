@@ -17,9 +17,9 @@
  */
 Circulo::Circulo(float r, float x, float y) {
     _radio = r;
-    setX( x );
-    setY( y );
-    setTipo( circulo );
+    _xc = x;
+    _yc = y;
+    _idTipo = circulo;
 }
 
 Circulo::Circulo(string parametros){

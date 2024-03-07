@@ -3,13 +3,12 @@
 #include "Cuadrado.h"
 #include "Triangulo.h"
 #include "Pentagono.h"
-#include <vector>
 #include <fstream>
 
 using namespace std;
 
 int main(int argc, char** argv){
-    vector<Geometrica*> vFig;
+    Geometrica* vFig[20];
     Geometrica* pG = 0;
 
     if(argc != 2){
@@ -26,14 +25,14 @@ int main(int argc, char** argv){
 
     cout << "Se abrirá el archivo: " << path << endl;
 
-    int tipo = 0;
+    int tipo = 0, cant = 0;
     size_t posicion = 0;
     if(archivo.is_open()){
         // Aquí va el codigo que se va a hacer para leer el archivo
         getline(archivo, path);
         while(!archivo.eof()){
             posicion = path.find(" ", posicion);
-            cout << path << "-> " << posicion <<endl;
+            cout << path << " -> " << posicion <<endl;
             tipo = atoi(path.substr(0, posicion).c_str());
             switch (tipo) {
             case circulo:
@@ -51,11 +50,14 @@ int main(int argc, char** argv){
             default:
                 break;
             }
-			vFig.push_back( pG );
+
+	    vFig[cant++] = pG;
             getline(archivo, path);
         }
-        cout << vFig.size() << endl;
+        cout << cant << endl;
     }
-
+    for( int i = 0; i < cant; i++){
+      cout << vFig[i]->area() << endl;
+    }
     return 0;
 }
