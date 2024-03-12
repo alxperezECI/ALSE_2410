@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Polinomio.h"
 #include "Termino.h"
-#include <math.h>
+#include <cmath>
 
 using namespace std;
 
