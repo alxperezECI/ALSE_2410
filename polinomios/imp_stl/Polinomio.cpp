@@ -39,97 +39,21 @@ void Polinomio::nuevoTermino(float c, int p) {
 }
 
 void Polinomio::simplificar() {
-/*    this->ordenar();
-    Termino *ptr1, *ptr2, *ptr3;
-    float coef= 0.;
-    int pot= 0;
-    ptr1=_polCabeza;
-    ptr2=ptr1->getSiguiente();
-    while( ptr1->getSiguiente() != NULL ){
-        if( ptr1->getP() == ptr2->getP() ){
-            coef = ptr1->getC() + ptr2->getC();
-            pot = ptr1->getP();
-            ptr1->setCP( coef, pot );
-            ptr3 = ptr1->getSiguiente();
-        }
-        else{
+    this->ordenar();
+  
 
-        }
-        ptr1=ptr2;
-
-        }
-*/
     return;
 }
 
 bool Polinomio::ordenar() {
-//    Termino *ptr1, *ptr2, *ptr3;
 
-    bool cambio = false;
-//    do{
-//        ptr1 = _polCabeza;
-//        cambio = false;
-//        while( ptr1->getSiguiente() != NULL ){
-//            ptr2 = ptr1->getSiguiente();
-//            if( ptr1->getP() < ptr2->getP() ){ // Es necesario intercambiar
-//                cout << ptr1 << " " << ptr2 <<endl;
-//                cambio = true;
-//                ptr1->setSiguiente( ptr2->getSiguiente() );
-//                ptr2->setSiguiente( ptr1 );
-//                cout << ptr1 << " " << ptr2 <<endl;
-//                if( _polCabeza == ptr1 ) {
-//                    _polCabeza = ptr2;
-//                }else{
-//                    ptr3 = _polCabeza;
-//                    //cout << ptr1 << " " << ptr3 << endl;
-//                    //cout << _polCabeza << " " << ptr3 << endl;
-//                    while( ptr3->getSiguiente() != ptr1 ){
-//                        //cout << ptr1 << " " << ptr3 << endl;
-//                        ptr3 = ptr3->getSiguiente();
-//                    }
-//                    ptr3->setSiguiente( ptr2 );
-//                }
-//            }
-//            ptr1 = ptr2;
-//        }
-//    }while( cambio );
 
     return cambio;
 }
 
 Polinomio& Polinomio::operator +(Polinomio& p) {
-//    this->ordenar();
-//    p.ordenar();
-    Polinomio* res = new Polinomio(*this);
-//    Polinomio* res1 = new Polinomio(p);
-//    Termino* temp = res->_polCabeza;
-//    Termino* temp1= res1->_polCabeza;
 
-//   if(temp != NULL){
-//        float newCoeff = 0.;
-//        int newPow = 0;
-
-//    while ( temp->getSiguiente() != NULL ){
-//        if (temp->getP()==temp1->getP()){
-//            newCoeff = temp->getC() + temp1->getC();
-//            newPow = temp->getP();
-//            temp->setCP( newCoeff, newPow );
-//            temp = temp->getSiguiente();
-//            temp1= temp1->getSiguiente();
-//        }
-//        else{
-//            newCoeff = temp->getC();
-//            newPow = temp->getP();
-//            temp->setCP( newCoeff, newPow );
-//            temp = temp->getSiguiente();
-//        }
-
-//        }
-//   }
-
-
-
-    return *res;
+    return *this;
 }
 
 /**
@@ -137,35 +61,8 @@ Polinomio& Polinomio::operator +(Polinomio& p) {
  * @return Polinomio&
  */
 Polinomio& Polinomio::operator -(Polinomio& p) {
-//    this->ordenar();
-//    p.ordenar();
-    Polinomio* res = new Polinomio(*this);
-//    Polinomio* res1 = new Polinomio(p);
-//    Termino* temp = res->_polCabeza;
-//    Termino* temp1= res1->_polCabeza;
 
-//   if(temp != NULL){
-//        float newCoeff = 0.;
-//        int newPow = 0;
-
-//    while ( temp->getSiguiente() != NULL ){
-//        if (temp->getP()==temp1->getP()){
-//            newCoeff = temp->getC() - temp1->getC();
-//            newPow = temp->getP();
-//            temp->setCP( newCoeff, newPow );
-//            temp = temp->getSiguiente();
-//            temp1= temp1->getSiguiente();
-//        }
-//        else{
-//            newCoeff = temp->getC();
-//            newPow = temp->getP();
-//            temp->setCP( newCoeff, newPow );
-//            temp = temp->getSiguiente();
-//        }
-
-//        }
-//   }
-    return *res;
+    return *this;
 }
 
 /**
@@ -173,8 +70,8 @@ Polinomio& Polinomio::operator -(Polinomio& p) {
  * @return Polinomio&
  */
 Polinomio& Polinomio::operator  *(Polinomio& p) {
-    Polinomio* res = new Polinomio();
-    return *res;
+    
+    return *this;
 }
 
 /**
@@ -182,22 +79,8 @@ Polinomio& Polinomio::operator  *(Polinomio& p) {
  * @return Polinomio&
  */
 Polinomio& Polinomio::operator /(float f) {
-    Polinomio* res = new Polinomio(*this);
-//    Termino* temp = res->_polCabeza;
-//    if(temp != NULL){
-//        float newCoeff = 0.;
-//        int newPow = 0;
 
-//        while ( temp->getSiguiente() != NULL ){
-//            newCoeff = temp->getC() / f;
-//            newPow = temp->getP();
-//            temp->setCP( newCoeff, newPow );
-//            temp = temp->getSiguiente();
-//        }
-
-//    }
-
-    return *res;
+    return *this;
 }
 
 ostream& operator << (ostream& stream, Polinomio& p){
