@@ -19,6 +19,7 @@ class Polinomio {
     ~Polinomio();
 
     Polinomio operator +(Polinomio& p);
+    Polinomio& operator =(const Polinomio& p);
     Polinomio operator -(Polinomio& p);
     Polinomio operator  *(Polinomio& p);
     Polinomio operator /(float f);
