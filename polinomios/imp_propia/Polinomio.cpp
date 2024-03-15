@@ -112,6 +112,18 @@ bool Polinomio::ordenar() {
     return cambio;
 }
 
+Polinomio& Polinomio::operator=(const Polinomio& p) {
+   Termino *ptr1;
+   borrar();
+   _variable = p._variable;
+   ptr1 = p._polCabeza;
+   while( ptr1 != NULL ){
+     nuevoTermino( ptr1->getC(), ptr1->getP() );
+     ptr1 = ptr1->getSiguiente();
+   }
+   return *this;
+}
+
 Polinomio Polinomio::operator +(Polinomio& p) {
     this->ordenar();
     p.ordenar();
