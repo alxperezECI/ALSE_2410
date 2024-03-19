@@ -19,15 +19,16 @@ public:
  * @param y
  */
 
+// Metodos para que determinan el calculo del area y del perimetro.
 float area();
 float perimetro();
-Triangulo(float b, float h, float x = 0., float y = 0.);
+Triangulo(float b, float h, float x = 0., float y = 0.); // Constructor con parametros.
 Triangulo(string parametros);
-private:
+private: 
 	float _base;
 	float _altura;
 	
-Triangulo();
+Triangulo(); // Constructor por omisión.
 };
 
 #endif //_TRIANGULO_H

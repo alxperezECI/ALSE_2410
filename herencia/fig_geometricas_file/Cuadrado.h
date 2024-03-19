@@ -9,7 +9,7 @@
 #include "Geometrica.h"
 
 
-class Cuadrado: public Geometrica {
+class Cuadrado: public Geometrica { // La clase Cuadrado pertenece la clase Geometrica.
 public: 
 	
 /**
@@ -17,19 +17,21 @@ public:
  * @param x
  * @param y
  */
-Cuadrado(float l, float x = 0., float y = 0.);
+Cuadrado(float l, float x = 0., float y = 0.); // Constructor con parametros.
 Cuadrado(string parametros);
 
+// Metodos para que determinan el calculo del area y del perimetro.
 float area();
 float perimetro();
 
+// Funciones set y get para la manipulación de atributos privados.
 void setLado(float l){ _lado = l;}
 float getLado(){ return _lado;}
 
 private: 
 	float _lado;
 	
-Cuadrado();
+Cuadrado(); // Constructor por omisión.
 };
 
 #endif //_CUADRADO_H

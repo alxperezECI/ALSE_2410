@@ -17,12 +17,17 @@ public:
  * @param x
  * @param y
  */
-Pentagono(float l, float x, float y);
+Pentagono(float l, float x, float y); // Constructor con parametros.
 Pentagono(string parametros);
+
+// Metodos para que determinan el calculo del area y del perimetro.
+float perimetro ();
+float area();
+
 private: 
 	float _lado;
 	
-Pentagono();
+Pentagono(); // Constructor por omisión.
 };
 
 #endif //_PENTAGONO_H

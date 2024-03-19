@@ -16,14 +16,14 @@ using namespace std;
 /**
  * @return float
  */
-float Geometrica::area() {
+float Geometrica::area() { // Se llama esta función para aquella clase hija que no implemente el metodo de calcular el área.
     return 0.0;
 }
 
 /**
  * @return float
  */
-float Geometrica::perimetro() {
+float Geometrica::perimetro() { // Se llama esta función para aquella clase hija que no implemente el metodo de calcular el perímetro.
     return 0.0;
 }
 
