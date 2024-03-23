@@ -10,6 +10,36 @@ struct complex{
     double angulo(){ return atan2( im, re); };
 };
 
+<<<<<<< HEAD
+double magnitud(complex vect ){ //función que encuentra la magnitud
+  double mag = sqrt( vect.re * vect.re + vect.im * vect.im );
+  return mag;
+}
+
+double angulo( complex vect ){ //función que encuentra el ángulo
+  double ang = atan2( vect.im, vect.re );
+  return ang;
+}
+
+complex mayor_magnitud ( complex (&vect)[10] ){
+  complex mayor = vect[0];
+  for( int i = 0; i < 10; i++ ){
+    if(magnitud( mayor ) < magnitud( vect[i] )){
+      mayor = vect[i];
+    }
+  }
+  return mayor;
+}
+
+complex mayor_angulo ( complex (&vect)[10] ){
+  complex mayor = vect[0];
+  for( int i = 0; i < 10; i++ ){
+    if(angulo( mayor ) < angulo( vect[i] )){
+      mayor = vect[i];
+    }
+  }
+  return mayor;
+=======
 // Crear una función que calcule la magnitud del número complejo
 double magnitud( const complex &a ){
   return sqrt( a.re * a.re + a.im * a.im);
@@ -18,6 +48,7 @@ double magnitud( const complex &a ){
 // Crear una funcion que calcule el ángulo del número complejo
 double angulo( const complex &a ){
   return atan2( a.im, a.re );
+>>>>>>> 13831d07cf1266411e0c99d7130d9b73dfed184b
 }
 
 int main(int argc, char** argv){
@@ -75,8 +106,38 @@ int main(int argc, char** argv){
       }
     }
 
+<<<<<<< HEAD
+  complex vect[10]; //arma los vectores de 10 complejos
+  int n = 0;
+  for( int i = 0; i < 10; i++ ){
+    vect[i].re = datos_int[n];
+    n++;
+    vect[i].im = datos_int[n];
+    n++;
+=======
     cout << "El número con mayor magnitud es: " << complejos[idx_max_mag].re << " + " << complejos[idx_max_mag].im << "j" <<  endl;
     cout << "El número con mayor ángulo es: " << complejos[idx_max_ang].re << " + " << complejos[idx_max_ang].im << "j" <<  endl;
+>>>>>>> 13831d07cf1266411e0c99d7130d9b73dfed184b
   }
+
+  for( int i = 0; i < 10; i++ ){ //imprime número, magnitud y ángulo
+    cout << "\nNúmero: [" << vect[i].re << ", " << vect[i].im << "]" <<endl;
+    cout << "Magnitud: " << magnitud( vect[i] ) << endl;
+    cout << "Ángulo: " << angulo( vect[i] ) << " rad \n" << endl;
+  }
+
+  complex mayor_mag = mayor_magnitud( vect ); //mayor magnitud
+  complex mayor_ang = mayor_angulo( vect ); //mayor angulo
+
+  cout << "\nEl número con mayor magnitud es: [" << mayor_mag.re << ", " << mayor_mag.im 
+  << "] con una magnitud de: " << magnitud( mayor_mag ) << endl; //imprime número de mayor magnitud
+  cout << "El número con mayor ángulo es: [" << mayor_ang.re << ", " << mayor_ang.im 
+  << "] con un ángulo de: " << angulo( mayor_ang ) << " rad" << endl; //imprime número de mayor ángulo
+
   return 0;
+<<<<<<< HEAD
+  }
 }
+=======
+}
+>>>>>>> 13831d07cf1266411e0c99d7130d9b73dfed184b

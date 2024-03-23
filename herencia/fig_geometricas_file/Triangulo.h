@@ -9,7 +9,7 @@
 #include "Geometrica.h"
 
 
-class Triangulo: public Geometrica {
+class Triangulo: public Geometrica { //se crea la clase hija Triangulo que es parte de la clase padre Geometrica
 public: 
 	
 /**
@@ -19,15 +19,15 @@ public:
  * @param y
  */
 
-float area();
-float perimetro();
-Triangulo(float b, float h, float x = 0., float y = 0.);
+float area(); //definicion de metodo que calcula area
+float perimetro(); //definicion de metodo que calcula perimetro
+Triangulo(float b, float h, float x = 0., float y = 0.); //constructor por parametros
 Triangulo(string parametros);
 private:
-	float _base;
-	float _altura;
+	float _base; //atributo privado base
+	float _altura; //atributo privado altura
 	
-Triangulo();
+Triangulo(); //constructor por omisión
 };
 
 #endif //_TRIANGULO_H
