@@ -4,11 +4,26 @@
 #include "Triangulo.h"
 #include "Pentagono.h"
 #include <fstream>
+#include <vector>
+#include <algorithm>
+
 
 using namespace std;
 
+bool compara(Geometrica* a, Geometrica* b){
+    //return a->area() < b->area();
+    return *a < *b;
+}
+
+vector<Geometrica*> ordenar( const vector<Geometrica*> vFig ){
+   vector<Geometrica*> copia( vFig );
+   sort( copia.begin(), copia.end(), compara );
+   return copia;
+}
+
+
 int main(int argc, char** argv){
-    Geometrica* vFig[20];
+    vector<Geometrica*> vFig;
     Geometrica* pG = 0;
 
     if(argc != 2){
@@ -51,13 +66,21 @@ int main(int argc, char** argv){
                 break;
             }
 
-	    vFig[cant++] = pG;
+	    vFig.push_back( pG );
             getline(archivo, path);
         }
         cout << cant << endl;
     }
-    for( int i = 0; i < cant; i++){
+
+    for( int i = 0; i < vFig.size(); i++){
       cout << vFig[i]->area() << endl;
     }
+
+    vector<Geometrica*> ordenado = ordenar( vFig );
+
+    for( int i = 0; i < ordenado.size(); i++){
+      cout << ordenado[i]->area() << endl;
+    }
+
     return 0;
 }

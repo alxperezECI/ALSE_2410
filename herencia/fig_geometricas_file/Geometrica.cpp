@@ -27,6 +27,9 @@ float Geometrica::perimetro() {
     return 0.0;
 }
 
+bool Geometrica::operator<( Geometrica &a ){
+    return area() < a.area();
+}
 /**
  * @param stream
  * @return ostream&

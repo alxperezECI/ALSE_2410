@@ -26,6 +26,7 @@ virtual float perimetro();
 /**
  * @param stream
  */
+  bool operator<( Geometrica &a );
 //friend ostream& operator<<(ostream& stream, Geometrica& g);
 
 void setX(float x){_xc = x;}
@@ -40,11 +41,11 @@ fig_G getTipo(){return _idTipo;};
 Geometrica();
 ~Geometrica();
 
-private:
+protected:
 	float _xc;
 	float _yc;
 	float _angulo;
-    fig_G _idTipo;
+        fig_G _idTipo;
 	
 
 };
